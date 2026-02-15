@@ -163,8 +163,8 @@ export default function Footer() {
             <span className="text-[11px] uppercase tracking-[0.25em] text-white/30">
               Conceptualised &amp; Engineered by
             </span>
-            <div className="flex items-center gap-2.5">
-              <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-white/5">
+            <a href="https://metaminds.firm.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 group">
+              <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-white/5 group-hover:bg-white/10 transition-colors">
                 <Image
                   src={assetPath("/metaminds-logo.jpg")}
                   alt="MetaMinds"
@@ -173,10 +173,10 @@ export default function Footer() {
                   sizes="48px"
                 />
               </div>
-              <span className="text-sm font-semibold tracking-wider text-white/50 hover:text-white/70 transition-colors">
+              <span className="text-sm font-semibold tracking-wider text-white/50 group-hover:text-white/70 transition-colors">
                 META MINDS
               </span>
-            </div>
+            </a>
           </motion.div>
         </div>
       </div>
