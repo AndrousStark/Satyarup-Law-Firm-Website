@@ -150,13 +150,13 @@ export default function PageTransition({ children }: { children: React.ReactNode
       <div ref={overlayRef} className="transition-overlay" />
       <div ref={logoOverlayRef} className="logo-overlay">
         <div className="logo-overlay-container">
-          <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4">
+          <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden mb-6">
             <Image
               src={assetPath("/satyarup-logo.jpeg")}
               alt="Satyarup Law Firm"
               fill
               className="object-cover"
-              sizes="128px"
+              sizes="200px"
             />
           </div>
           <span className="text-2xl font-bold text-white tracking-wider font-display">
