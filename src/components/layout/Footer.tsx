@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const practiceLinks = [
-  { href: "/practice-areas/corporate-law", label: "Corporate Law" },
-  { href: "/practice-areas/criminal-defence", label: "Criminal Defence" },
-  { href: "/practice-areas/civil-litigation", label: "Civil Litigation" },
-  { href: "/practice-areas/family-law", label: "Family Law" },
-  { href: "/practice-areas/property-real-estate", label: "Property & Real Estate" },
-  { href: "/practice-areas/labour-employment", label: "Labour & Employment" },
-  { href: "/practice-areas/intellectual-property", label: "Intellectual Property" },
+  { href: "/practice-areas/supreme-court-litigation", label: "Supreme Court Litigation" },
+  { href: "/practice-areas/high-court-litigation", label: "High Court Litigation" },
+  { href: "/practice-areas/arbitration-dispute-resolution", label: "Arbitration & Disputes" },
+  { href: "/practice-areas/banking-financial-litigation", label: "Banking & Financial" },
+  { href: "/practice-areas/government-regulatory-matters", label: "Government & Regulatory" },
+  { href: "/practice-areas/environmental-tribunal-litigation", label: "Environmental & Tribunal" },
 ];
 
 const quickLinks = [
   { href: "/about", label: "About Us" },
-  { href: "/practice-areas", label: "Our Practices" },
-  { href: "/news", label: "News & Media" },
+  { href: "/practice-areas", label: "Our Expertise" },
+  { href: "/people", label: "Our People" },
+  { href: "/news", label: "In the Media" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact Us" },
 ];
@@ -37,10 +37,10 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <div className="mb-6">
               <h3 className="text-2xl font-bold tracking-wider font-display">SATYARUP</h3>
-              <p className="text-xs uppercase tracking-[0.3em] text-warm-gold mt-1">Law Firm Group</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-warm-gold mt-1">Law Firm</p>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Delivering excellence in legal services with integrity, precision, and unwavering commitment to our clients&apos; success.
+              Strategic litigation and dispute resolution practice with over three decades of experience before the Supreme Court, High Courts, and tribunals across India.
             </p>
             <div className="flex gap-4">
               {["LinkedIn", "Twitter", "Email"].map((social) => (
@@ -99,18 +99,14 @@ export default function Footer() {
               Contact Us
             </h4>
             <div className="space-y-4 text-sm text-white/60">
-              <p>123 Legal Avenue, Suite 500<br />New Delhi, India</p>
+              <p>Chamber No. 319<br />Supreme Court Lawyers Chambers<br />M.C. Setalvad Block<br />Bhagwan Dass Road<br />New Delhi &ndash; 110001</p>
               <p>
                 <span className="text-white/80">Phone:</span><br />
-                +91-11-2205-3080
+                <a href="tel:+919810343806" className="hover:text-warm-gold transition-colors">+91-9810343806</a>
               </p>
               <p>
                 <span className="text-white/80">Email:</span><br />
-                info@satyaruplawfirm.com
-              </p>
-              <p>
-                <span className="text-white/80">Hours:</span><br />
-                Mon - Fri: 9:00 AM - 6:00 PM
+                <a href="mailto:satyaruplawfirm@gmail.com" className="hover:text-warm-gold transition-colors">satyaruplawfirm@gmail.com</a>
               </p>
             </div>
           </motion.div>
@@ -125,7 +121,7 @@ export default function Footer() {
           className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Satyarup Law Firm Group. All rights reserved.
+            &copy; {new Date().getFullYear()} Satyarup Law Firm. All rights reserved. | Tech Advisor: Aniruddh Atrey
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-xs text-white/40 hover:text-warm-gold transition-colors">

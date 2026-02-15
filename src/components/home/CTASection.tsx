@@ -28,15 +28,15 @@ export default function CTASection() {
 
           <p className="text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed">
             Schedule a confidential consultation with our experienced legal team.
-            We are here to provide the strategic guidance you need.
+            We provide practical, well-reasoned, and result-oriented legal solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/contact" variant="primary" size="lg">
-              Schedule Free Consultation
+              Schedule Consultation
             </Button>
             <div className="text-white/40 text-sm">
-              or call us at <a href="tel:+911122053080" className="text-warm-gold hover:underline">+91-11-2205-3080</a>
+              or call us at <a href="tel:+919810343806" className="text-warm-gold hover:underline">+91-9810343806</a>
             </div>
           </div>
         </motion.div>

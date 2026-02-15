@@ -83,9 +83,9 @@ export default function CareersPage() {
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                 <SectionHeading label="Why Join Us" title="Build Your Legal Career" align="left" />
                 <p className="text-warm-gray leading-relaxed mb-6">
-                  At Satyarup Law Firm Group, we believe our people are our greatest asset. We foster an
+                  At Satyarup Law Firm, we believe our people are our greatest asset. We foster an
                   environment of continuous learning, professional growth, and meaningful work that makes
-                  a difference in people&apos;s lives.
+                  a difference in the legal profession.
                 </p>
                 <ul className="space-y-3">
                   {benefits.map((benefit) => (

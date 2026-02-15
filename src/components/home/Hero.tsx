@@ -56,7 +56,7 @@ export default function Hero() {
           transition={{ delay: 1.4, duration: 0.6 }}
           className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-6 font-medium"
         >
-          Excellence in Legal Services
+          Strategic Litigation. Trusted Advocacy. Professional Excellence.
         </motion.span>
 
         <motion.h1
@@ -74,7 +74,7 @@ export default function Hero() {
           transition={{ delay: 1.8, duration: 0.6 }}
           className="text-lg md:text-xl text-white/60 tracking-[0.2em] uppercase mb-3 font-light"
         >
-          Law Firm Group
+          Law Firm
         </motion.p>
 
         <motion.div
@@ -88,9 +88,9 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 0.8 }}
-          className="max-w-lg text-center text-white/50 text-sm md:text-base leading-relaxed mb-10"
+          className="max-w-xl text-center text-white/50 text-sm md:text-base leading-relaxed mb-10"
         >
-          Delivering strategic legal solutions with integrity, precision, and an unwavering commitment to justice.
+          A litigation and dispute-resolution practice representing clients before the Supreme Court of India, High Courts, and specialized tribunals across the country.
         </motion.p>
 
         <motion.div
@@ -103,7 +103,7 @@ export default function Hero() {
             Schedule Consultation
           </Button>
           <Button href="/practice-areas" variant="outline" size="lg" className="!border-white/30 !text-white hover:!bg-white hover:!text-charcoal">
-            Our Expertise
+            Our Practice Areas
           </Button>
         </motion.div>
 

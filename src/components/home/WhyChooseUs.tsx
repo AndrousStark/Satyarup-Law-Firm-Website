@@ -7,23 +7,23 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "Proven Track Record",
-    description: "Over two decades of successful outcomes across diverse legal domains, backed by deep expertise and strategic thinking.",
+    title: "Depth of Experience",
+    description: "Over three decades of courtroom practice across multiple courts and tribunals, including the Supreme Court of India.",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&h=300&fit=crop&auto=format",
   },
   {
-    title: "Client-Centric Approach",
-    description: "Every case receives personalized attention. We listen, understand, and craft tailored strategies that serve your specific needs.",
+    title: "Institutional Representation",
+    description: "Experience representing government bodies, public sector enterprises, nationalized banks, universities, and institutions.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop&auto=format",
   },
   {
-    title: "Rapid Response Team",
-    description: "Justice delayed is justice denied. Our dedicated team responds with urgency, ensuring your matters are handled promptly.",
+    title: "Nationwide Practice",
+    description: "Appearances in the Supreme Court, several High Courts, and tribunals across India ensuring comprehensive geographical reach.",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&h=300&fit=crop&auto=format",
   },
   {
-    title: "Transparent Communication",
-    description: "Stay informed at every stage. We provide clear, honest counsel and keep you updated throughout the legal process.",
+    title: "Professional Integrity",
+    description: "Commitment to ethical practice, responsible advocacy, and upholding the highest standards of professional conduct.",
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=300&h=300&fit=crop&auto=format",
   },
 ];

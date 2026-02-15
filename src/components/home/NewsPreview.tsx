@@ -40,9 +40,9 @@ export default function NewsPreview() {
     <section className="py-20 md:py-28 bg-cream">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
-          label="Latest Updates"
-          title="News & Legal Insights"
-          description="Stay informed with the latest legal developments, firm updates, and expert analysis."
+          label="In the Media"
+          title="Legal Updates & Insights"
+          description="Reported judgments, publications, and important case updates from our practice."
         />
 
         <motion.div

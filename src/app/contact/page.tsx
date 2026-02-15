@@ -10,10 +10,9 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 
 const contactInfo = [
-  { label: "Address", value: "123 Legal Avenue, Suite 500\nNew Delhi, India - 110001", icon: "&#9962;" },
-  { label: "Phone", value: "+91-11-2205-3080\n+91-11-2202-3821", icon: "&#9742;" },
-  { label: "Email", value: "info@satyaruplawfirm.com", icon: "&#9993;" },
-  { label: "Hours", value: "Monday - Friday\n9:00 AM - 6:00 PM IST", icon: "&#9200;" },
+  { label: "Office Address", value: "Chamber No. 319\nSupreme Court Lawyers Chambers\nM.C. Setalvad Block\nBhagwan Dass Road\nNew Delhi \u2013 110001", icon: "&#9962;" },
+  { label: "Phone", value: "+91-9810343806", icon: "&#9742;" },
+  { label: "Email", value: "drashwanibharadwaj@gmail.com\nsatyaruplawfirm@gmail.com", icon: "&#9993;" },
 ];
 
 export default function ContactPage() {
@@ -31,7 +30,7 @@ export default function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || "N/A"}\n\nMessage:\n${formData.message}`
     );
-    window.open(`mailto:info@satyaruplawfirm.com?subject=${subject}&body=${body}`, "_blank");
+    window.open(`mailto:satyaruplawfirm@gmail.com?subject=${subject}&body=${body}`, "_blank");
 
     setStatus("success");
     setStatusMessage("Thank you! Your email client has been opened. Please send the pre-filled email.");

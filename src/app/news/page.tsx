@@ -83,7 +83,8 @@ export default function NewsPage() {
             className="relative z-10 text-center px-6"
           >
             <span className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-4 block">Stay Informed</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-display">News & Media</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white font-display">In the Media</h1>
+            <p className="text-white/50 text-sm mt-4 max-w-xl mx-auto">Reported judgments, legal commentary, and important case updates from Satyarup Law Firm.</p>
           </motion.div>
         </section>
 

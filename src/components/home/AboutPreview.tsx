@@ -7,10 +7,10 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
-  { value: "500+", label: "Cases Won" },
-  { value: "50+", label: "Legal Experts" },
-  { value: "98%", label: "Client Satisfaction" },
+  { value: "30+", label: "Years Experience" },
+  { value: "AoR", label: "Supreme Court of India" },
+  { value: "6+", label: "High Courts Nationwide" },
+  { value: "Since 1996", label: "Legal Practice" },
 ];
 
 export default function AboutPreview() {
@@ -45,7 +45,7 @@ export default function AboutPreview() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="absolute -bottom-6 -right-6 md:right-6 glass-card p-6 shimmer"
             >
-              <p className="text-3xl font-bold text-warm-gold font-display">25+</p>
+              <p className="text-3xl font-bold text-warm-gold font-display">30+</p>
               <p className="text-sm text-warm-gray">Years of Legal Excellence</p>
             </motion.div>
             {/* Decorative border */}
@@ -61,18 +61,18 @@ export default function AboutPreview() {
           >
             <SectionHeading
               label="About Our Firm"
-              title="A Legacy of Legal Excellence"
+              title="Litigation-Focused Legal Practice"
               align="left"
             />
             <p className="text-warm-gray leading-relaxed mb-6">
-              Satyarup Law Firm Group is a premier full-service law firm dedicated to providing
-              strategic legal solutions across diverse practice areas. With a team of seasoned
-              attorneys and legal professionals, we deliver results-driven counsel that protects
-              and advances our clients&apos; interests.
+              Satyarup Law Firm is a litigation-focused legal practice led by Dr. Ashwani Bhardwaj,
+              Advocate-on-Record, Supreme Court of India, bringing over three decades of legal
+              experience in complex litigation, arbitration, and government representation.
             </p>
             <p className="text-warm-gray leading-relaxed mb-8">
-              Our commitment to excellence, integrity, and innovation has earned us the trust
-              of individuals, corporations, and institutions seeking top-tier legal representation.
+              The firm regularly appears before the Supreme Court of India, various High Courts,
+              and tribunals in matters involving civil, criminal, constitutional, arbitration,
+              banking, commercial, and environmental law.
             </p>
 
             {/* Stats Grid */}

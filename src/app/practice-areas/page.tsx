@@ -10,46 +10,40 @@ import Link from "next/link";
 
 const practices = [
   {
-    title: "Corporate Law",
-    slug: "corporate-law",
-    description: "Comprehensive corporate advisory, M&A, governance, venture capital, private equity, and regulatory compliance for businesses of all sizes.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "Criminal Defence",
-    slug: "criminal-defence",
-    description: "Aggressive and strategic defence in criminal matters including white-collar crime, fraud, cyber crime, and complex criminal litigation.",
+    title: "Supreme Court Practice",
+    slug: "supreme-court-litigation",
+    description: "As an Advocate-on-Record practice, the firm provides complete procedural and litigation support before the Supreme Court of India, including Special Leave Petitions, Civil & Criminal Appeals, and Constitutional matters.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80",
   },
   {
-    title: "Civil Litigation",
-    slug: "civil-litigation",
-    description: "Expert dispute resolution through litigation, arbitration, and mediation across commercial, contractual, and tortious claims.",
+    title: "High Court Litigation",
+    slug: "high-court-litigation",
+    description: "Appearances before the Delhi, Bombay, Punjab & Haryana, Madhya Pradesh, Patna, and Tripura High Courts in original and appellate matters across civil, criminal, and commercial law.",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80",
+  },
+  {
+    title: "Arbitration & Dispute Resolution",
+    slug: "arbitration-dispute-resolution",
+    description: "Extensive experience in arbitration involving government departments, institutions, and commercial entities. Dr. Ashwani Bhardwaj has served as an arbitrator on the panel of the Delhi International Arbitration Centre.",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80",
   },
   {
-    title: "Family Law",
-    slug: "family-law",
-    description: "Sensitive and strategic handling of divorce, child custody, adoption, domestic violence, maintenance, and matrimonial disputes.",
-    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "Property & Real Estate",
-    slug: "property-real-estate",
-    description: "End-to-end real estate advisory including transactions, title verification, RERA compliance, construction disputes, and landlord-tenant matters.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "Labour & Employment",
-    slug: "labour-employment",
-    description: "Employment contracts, workplace disputes, compliance with labour codes, industrial relations, and employee benefit advisory.",
+    title: "Banking & Financial Litigation",
+    slug: "banking-financial-litigation",
+    description: "Representing major financial institutions including Bank of Baroda, Punjab National Bank, Central Bank of India, and Indian Overseas Bank in recovery proceedings, commercial disputes, and regulatory issues.",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&auto=format&fit=crop&q=80",
   },
   {
-    title: "Intellectual Property",
-    slug: "intellectual-property",
-    description: "Patent and trademark registration, copyright protection, trade secrets, licensing, and IP litigation across all industries.",
+    title: "Government & Public Sector Representation",
+    slug: "government-regulatory-matters",
+    description: "Representing the Union of India, Ministry of Railways, Western Coalfields Limited, Shipping Corporation of India, and Association of Indian Universities in complex statutory and policy matters.",
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&auto=format&fit=crop&q=80",
+  },
+  {
+    title: "Environmental & Tribunal Matters",
+    slug: "environmental-tribunal-litigation",
+    description: "Handling matters before the National Green Tribunal, Consumer Dispute Redressal Commissions, and arbitration forums, including environmental litigation and regulatory disputes.",
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -75,10 +69,13 @@ export default function PracticeAreasPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="relative z-10 text-center px-6"
+            className="relative z-10 text-center px-6 max-w-3xl"
           >
             <span className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-4 block">Our Expertise</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-display">Practice Areas</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white font-display mb-4">Practice Areas</h1>
+            <p className="text-white/50 text-sm md:text-base">
+              The firm regularly appears before the Supreme Court of India, various High Courts, and tribunals in matters involving civil, criminal, constitutional, arbitration, banking, commercial, and environmental law.
+            </p>
           </motion.div>
         </section>
 

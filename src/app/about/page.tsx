@@ -7,38 +7,19 @@ import Footer from "@/components/layout/Footer";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Image from "next/image";
 
-const team = [
-  {
-    name: "Satyarup Sengupta",
-    role: "Founding Partner",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80",
-    bio: "With over 25 years of legal experience, Satyarup leads the firm with a vision for excellence and justice.",
-  },
-  {
-    name: "Aditi Verma",
-    role: "Senior Partner, Corporate Law",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
-    bio: "Specialist in corporate governance, M&A, and regulatory compliance with 18 years of practice.",
-  },
-  {
-    name: "Vikram Rao",
-    role: "Senior Partner, Litigation",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
-    bio: "A formidable litigator with an exceptional record in complex civil and criminal matters.",
-  },
-  {
-    name: "Meera Joshi",
-    role: "Partner, Family Law",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80",
-    bio: "Known for her compassionate yet strategic approach to family law and dispute resolution.",
-  },
+const values = [
+  { title: "Preparation", description: "Thorough preparation is the foundation of effective advocacy. Every matter receives detailed study of facts and applicable law." },
+  { title: "Clarity", description: "Clear legal reasoning and structured arguments strengthen every case. We believe in disciplined, well-reasoned counsel." },
+  { title: "Integrity", description: "Professional ethics and responsible practice are central to our work. We uphold the highest standards of professional conduct." },
+  { title: "Commitment", description: "Every matter receives careful attention and dedicated effort. We remain committed to protecting the interests of our clients." },
 ];
 
-const values = [
-  { title: "Integrity", description: "We uphold the highest ethical standards in every interaction and case." },
-  { title: "Excellence", description: "We pursue the best possible outcomes through meticulous preparation and expertise." },
-  { title: "Innovation", description: "We embrace modern solutions while respecting time-tested legal principles." },
-  { title: "Commitment", description: "We are dedicated to our clients' success and the pursuit of justice." },
+const services = [
+  "Legal strategy and advisory",
+  "Drafting of pleadings and petitions",
+  "Filing and procedural compliance",
+  "Representation before courts and tribunals",
+  "Post-judgment advisory and compliance",
 ];
 
 export default function AboutPage() {
@@ -53,7 +34,7 @@ export default function AboutPage() {
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&auto=format&fit=crop&q=80"
-              alt="Office"
+              alt="Supreme Court"
               fill
               className="object-cover opacity-30"
             />
@@ -65,12 +46,12 @@ export default function AboutPage() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="relative z-10 text-center px-6"
           >
-            <span className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-4 block">Our Story</span>
+            <span className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-4 block">Our Firm</span>
             <h1 className="text-4xl md:text-6xl font-bold text-white font-display">About Us</h1>
           </motion.div>
         </section>
 
-        {/* Mission */}
+        {/* The Firm */}
         <section className="py-20 md:py-28 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -80,22 +61,27 @@ export default function AboutPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                <SectionHeading label="Our Mission" title="Justice Through Excellence" align="left" />
+                <SectionHeading label="The Firm" title="Commitment to Professional Excellence" align="left" />
                 <p className="text-warm-gray leading-relaxed mb-6">
-                  Satyarup Law Firm Group was founded on the principle that every individual and
-                  organization deserves access to exceptional legal representation. Our mission is
-                  to deliver strategic, results-driven counsel that protects rights, resolves disputes,
-                  and creates opportunities.
+                  Satyarup Law Firm is committed to delivering high-quality legal services with
+                  professionalism, diligence, and integrity. The firm focuses on litigation and dispute
+                  resolution, providing legal representation and advisory services across a wide range
+                  of legal areas.
                 </p>
                 <p className="text-warm-gray leading-relaxed mb-6">
-                  We believe in building lasting relationships with our clients, understanding their unique
-                  challenges, and providing solutions that go beyond mere legal compliance to create
-                  meaningful, positive outcomes.
+                  The practice handles matters at all stages of litigation, guided by careful
+                  preparation, thorough legal research, and practical judgment.
                 </p>
-                <p className="text-warm-gray leading-relaxed">
-                  Our multidisciplinary team brings together decades of combined experience across diverse
-                  practice areas, enabling us to offer comprehensive legal support under one roof.
-                </p>
+
+                <h3 className="text-lg font-semibold text-charcoal font-display mb-4">Our Services Include</h3>
+                <ul className="space-y-3 mb-6">
+                  {services.map((service) => (
+                    <li key={service} className="flex items-center gap-3">
+                      <span className="w-2 h-2 rounded-full bg-warm-gold flex-shrink-0" />
+                      <span className="text-warm-gray text-sm">{service}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
 
               <motion.div
@@ -108,7 +94,7 @@ export default function AboutPage() {
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&auto=format&fit=crop&q=80"
-                    alt="Modern office"
+                    alt="Supreme Court Lawyers Chambers"
                     fill
                     className="object-cover"
                   />
@@ -119,10 +105,28 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values */}
+        {/* Mission */}
+        <section className="py-16 md:py-20 bg-charcoal">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <span className="text-warm-gold text-xs uppercase tracking-[0.4em] mb-4 block">Our Mission</span>
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-display italic">
+                &ldquo;To provide reliable, ethical, and high-quality legal representation while upholding
+                the rule of law and protecting the interests of clients.&rdquo;
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Our Philosophy / Values */}
         <section className="py-20 md:py-28 bg-cream">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <SectionHeading label="Our Values" title="What Drives Us" />
+            <SectionHeading label="Our Philosophy" title="Guiding Principles" />
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
@@ -147,31 +151,28 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Team */}
+        {/* Our Approach */}
         <section className="py-20 md:py-28 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <SectionHeading label="Our Team" title="Meet Our Leadership" description="A team of seasoned professionals dedicated to your success." />
+            <SectionHeading label="Our Approach" title="Structured & Disciplined Process" description="At Satyarup Law Firm, litigation is approached as a structured and disciplined process." />
             <motion.div
               variants={prefersReducedMotion ? {} : staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+              className="grid gap-6 md:grid-cols-5"
             >
-              {team.map((member) => (
-                <motion.div key={member.name} variants={fadeUp} className="group text-center">
-                  <div className="relative aspect-[3/4] rounded-xl overflow-hidden mb-4">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-charcoal font-display">{member.name}</h3>
-                  <p className="text-sm text-warm-gold mb-2">{member.role}</p>
-                  <p className="text-xs text-warm-gray leading-relaxed">{member.bio}</p>
+              {[
+                { step: "01", title: "Detailed Study", desc: "Thorough analysis of facts and applicable law" },
+                { step: "02", title: "Strategic Planning", desc: "Careful planning of litigation steps" },
+                { step: "03", title: "Drafting", desc: "Meticulous drafting and documentation" },
+                { step: "04", title: "Advocacy", desc: "Effective oral advocacy in courts" },
+                { step: "05", title: "Communication", desc: "Continuous client communication" },
+              ].map((item, i) => (
+                <motion.div key={item.step} variants={fadeUp} className="relative text-center p-6 rounded-xl bg-cream/50 border border-warm-gold/10">
+                  <span className="text-3xl font-bold text-warm-gold/30 font-display">{item.step}</span>
+                  <h3 className="text-sm font-semibold text-charcoal font-display mt-2 mb-2">{item.title}</h3>
+                  <p className="text-xs text-warm-gray leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </motion.div>

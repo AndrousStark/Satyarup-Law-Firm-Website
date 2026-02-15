@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/practice-areas", label: "Our Practices" },
-  { href: "/news", label: "News & Media" },
+  { href: "/about", label: "About" },
+  { href: "/practice-areas", label: "Expertise" },
+  { href: "/people", label: "People" },
+  { href: "/news", label: "In the Media" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
@@ -57,7 +58,7 @@ export default function Header() {
               "text-[0.6rem] uppercase tracking-[0.3em] transition-colors duration-300",
               scrolled ? "text-warm-gray" : "text-white/70"
             )}>
-              Law Firm Group
+              Law Firm
             </span>
           </div>
         </Link>

@@ -63,7 +63,7 @@ export default function PracticeAreaClient({ practice }: PracticeAreaClientProps
               </ul>
               <div className="glass-card shimmer p-8 text-center">
                 <h3 className="text-xl font-semibold text-charcoal font-display mb-3">Need Legal Assistance?</h3>
-                <p className="text-warm-gray mb-6">Schedule a confidential consultation with our {practice.title} team.</p>
+                <p className="text-warm-gray mb-6">Schedule a confidential consultation regarding {practice.title} matters.</p>
                 <Button href="/contact" variant="primary">Schedule Consultation</Button>
               </div>
             </motion.div>
