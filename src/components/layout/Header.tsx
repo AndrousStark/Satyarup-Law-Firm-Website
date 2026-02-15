@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -37,15 +38,14 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <div className="w-10 h-10 rounded-full border-2 border-warm-gold flex items-center justify-center group-hover:bg-warm-gold/10 transition-colors duration-300">
-              <span className={cn(
-                "text-lg font-bold font-display transition-colors duration-300",
-                scrolled ? "text-charcoal" : "text-white"
-              )}>
-                S
-              </span>
-            </div>
+          <div className="relative w-11 h-11 rounded-full overflow-hidden border border-warm-gold/30 group-hover:border-warm-gold transition-colors duration-300 flex-shrink-0">
+            <Image
+              src="/satyarup-logo.jpeg"
+              alt="Satyarup Law Firm"
+              fill
+              className="object-cover"
+              sizes="44px"
+            />
           </div>
           <div className="flex flex-col">
             <span className={cn(

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -35,9 +36,20 @@ export default function Footer() {
         >
           {/* Brand */}
           <motion.div variants={fadeUp}>
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold tracking-wider font-display">SATYARUP</h3>
-              <p className="text-xs uppercase tracking-[0.3em] text-warm-gold mt-1">Law Firm</p>
+            <div className="mb-6 flex items-center gap-3">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-warm-gold/30 flex-shrink-0">
+                <Image
+                  src="/satyarup-logo.jpeg"
+                  alt="Satyarup Law Firm"
+                  fill
+                  className="object-cover"
+                  sizes="48px"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold tracking-wider font-display">SATYARUP</h3>
+                <p className="text-xs uppercase tracking-[0.3em] text-warm-gold mt-0.5">Law Firm</p>
+              </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Strategic litigation and dispute resolution practice with over three decades of experience before the Supreme Court, High Courts, and tribunals across India.
@@ -46,7 +58,7 @@ export default function Footer() {
               {["LinkedIn", "Twitter", "Email"].map((social) => (
                 <a
                   key={social}
-                  href="#"
+                  href={social === "Email" ? "mailto:satyaruplawfirm@gmail.com" : "#"}
                   className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-xs text-white/60 hover:border-warm-gold hover:text-warm-gold transition-all duration-300"
                 >
                   {social[0]}
@@ -135,6 +147,37 @@ export default function Footer() {
             </Link>
           </div>
         </motion.div>
+      </div>
+
+      {/* MetaMinds Credit */}
+      <div className="border-t border-white/5 bg-[#111111]">
+        <div className="mx-auto max-w-7xl px-6 py-5 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3"
+          >
+            <span className="text-[11px] uppercase tracking-[0.25em] text-white/30">
+              Conceptualised &amp; Engineered by
+            </span>
+            <div className="flex items-center gap-2.5">
+              <div className="relative w-7 h-7 rounded-md overflow-hidden flex-shrink-0 bg-white/5">
+                <Image
+                  src="/metaminds-logo.jpg"
+                  alt="MetaMinds"
+                  fill
+                  className="object-contain p-0.5"
+                  sizes="28px"
+                />
+              </div>
+              <span className="text-sm font-semibold tracking-wider text-white/50 hover:text-white/70 transition-colors">
+                META MINDS
+              </span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );
