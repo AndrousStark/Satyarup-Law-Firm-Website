@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/practice-areas", label: "Expertise" },
   { href: "/people", label: "People" },
-  { href: "/news", label: "In the Media" },
+  { href: "/news", label: "News & Media" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];

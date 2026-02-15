@@ -18,7 +18,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/practice-areas", label: "Our Expertise" },
   { href: "/people", label: "Our People" },
-  { href: "/news", label: "In the Media" },
+  { href: "/news", label: "News & Media" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact Us" },
 ];

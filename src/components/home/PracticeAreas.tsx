@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const practices = [
   {
@@ -80,12 +81,12 @@ export default function PracticeAreas() {
                 <div className="flip-back">
                   <div className="flip-back-content">
                     <p className="mb-4 text-sm">{practice.description}</p>
-                    <a
+                    <Link
                       href={`/practice-areas/${practice.slug}`}
                       className="text-sm font-semibold text-warm-gold hover:underline"
                     >
                       Learn More &rarr;
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
