@@ -1,0 +1,330 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-white: #ffffff;
+  --color-cream: #FFF8F0;
+  --color-warm-gold: #C9A96E;
+  --color-light-gold: #E8D5B5;
+  --color-charcoal: #1A1A1A;
+  --color-warm-gray: #6B6B6B;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #1A1A1A;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #C9A96E;
+  color: #ffffff;
+}
+
+/* ===== PAGE TRANSITION OVERLAY ===== */
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.transition-block {
+  flex: 1;
+  height: 100%;
+  background: #1A1A1A;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.logo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1A1A1A;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.logo-overlay-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  display: grid;
+  position: relative;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh;
+  place-items: center;
+  overflow: hidden;
+  animation: clip-hero 1.25s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+  will-change: clip-path;
+}
+
+.hero-bg,
+.hero-content {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.hero-bg {
+  display: grid;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  inset: -10%;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.5) 0%,
+    rgba(201, 169, 110, 0.15) 50%,
+    rgba(26, 26, 26, 0.6) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.75s 1.2s linear forwards;
+}
+
+@keyframes clip-hero {
+  from { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); }
+  to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleHero {
+  from { transform: scale(1.2); }
+  to { transform: scale(1.05); }
+}
+
+/* ===== 3D FLIP CARDS (Practice Areas) ===== */
+.flip-card {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  transition: ease all 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.flip-card:hover .flip-front {
+  transform: rotateY(-180deg);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.flip-card:hover .flip-front::before {
+  transform: translateZ(30px);
+}
+
+.flip-card:hover .flip-front .flip-title {
+  transform: translateZ(100px);
+}
+
+.flip-card:hover .flip-back {
+  transform: rotateY(0deg) translateZ(0px) scale(1);
+  visibility: visible;
+  opacity: 1;
+  background: rgba(255, 248, 240, 0.9);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.15);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.flip-front {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: ease all 0.4s;
+  background: linear-gradient(135deg, #1A1A1A 0%, #333 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  z-index: 3;
+  transform: translateZ(1px);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.flip-front::before {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  inset: 16px;
+  z-index: 2;
+  transition: ease all 0.8s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+  border-radius: 0.5rem;
+}
+
+.flip-front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transition: ease all 0.8s;
+  background: rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden;
+}
+
+.flip-title {
+  font-weight: 600;
+  position: relative;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 0.8s;
+  z-index: 3;
+  font-size: 1.1rem;
+  transform: translateZ(0px);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.flip-icon {
+  position: relative;
+  z-index: 3;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  transform-style: preserve-3d;
+  transition: ease all 0.8s;
+}
+
+.flip-back {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform ease 0.8s, visibility 0s, opacity 0s;
+  transform: rotateY(180deg) translateZ(-100px) scale(0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 0.75rem;
+}
+
+.flip-back-content {
+  text-align: center;
+  color: #1A1A1A;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ===== SMOOTH SCROLLBAR ===== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== SHIMMER EFFECT ===== */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(201, 169, 110, 0.05) 25%,
+    transparent 50%,
+    rgba(201, 169, 110, 0.05) 75%,
+    transparent 100%
+  );
+  background-size: 400% 400%;
+  animation: shimmer 8s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-rows: 100svh;
+  }
+
+  .flip-card {
+    height: 180px;
+  }
+}
