@@ -164,13 +164,13 @@ export default function Footer() {
               Conceptualised &amp; Engineered by
             </span>
             <div className="flex items-center gap-2.5">
-              <div className="relative w-7 h-7 rounded-md overflow-hidden flex-shrink-0 bg-white/5">
+              <div className="relative w-12 h-12 rounded-md overflow-hidden flex-shrink-0 bg-white/5">
                 <Image
                   src={assetPath("/metaminds-logo.jpg")}
                   alt="MetaMinds"
                   fill
                   className="object-contain p-0.5"
-                  sizes="28px"
+                  sizes="48px"
                 />
               </div>
               <span className="text-sm font-semibold tracking-wider text-white/50 hover:text-white/70 transition-colors">
