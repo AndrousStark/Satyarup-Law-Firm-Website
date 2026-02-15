@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ delay: 1.6, duration: 0.8, ease: [0.2, 0.9, 0.3, 1] }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold font-display text-white text-center leading-tight mb-4"
         >
-          Satyarup
+          SATYARUP
         </motion.h1>
 
         <motion.p
