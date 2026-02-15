@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn, assetPath } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -40,7 +40,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-11 h-11 rounded-full overflow-hidden border border-warm-gold/30 group-hover:border-warm-gold transition-colors duration-300 flex-shrink-0">
             <Image
-              src="/satyarup-logo.jpeg"
+              src={assetPath("/satyarup-logo.jpeg")}
               alt="Satyarup Law Firm"
               fill
               className="object-cover"

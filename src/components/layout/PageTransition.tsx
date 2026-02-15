@@ -4,6 +4,7 @@ import { useEffect, useRef, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Image from "next/image";
+import { assetPath, BASE_PATH } from "@/lib/utils";
 
 const NUM_BLOCKS = 20;
 
@@ -103,7 +104,12 @@ export default function PageTransition({ children }: { children: React.ReactNode
       if (href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel") || href === "#") return;
 
       e.preventDefault();
-      const url = new URL(target.href).pathname;
+      // target.href is the fully resolved URL which includes basePath on GitHub Pages.
+      // router.push() auto-adds basePath, so we must strip it to avoid double-prefixing.
+      let url = new URL(target.href).pathname;
+      if (BASE_PATH && url.startsWith(BASE_PATH)) {
+        url = url.slice(BASE_PATH.length) || "/";
+      }
       if (url !== pathname) handleRouteChange(url);
     },
     [pathname, handleRouteChange]
@@ -146,7 +152,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
         <div className="logo-overlay-container">
           <div className="relative w-20 h-20 rounded-full overflow-hidden mb-4">
             <Image
-              src="/satyarup-logo.jpeg"
+              src={assetPath("/satyarup-logo.jpeg")}
               alt="Satyarup Law Firm"
               fill
               className="object-cover"
