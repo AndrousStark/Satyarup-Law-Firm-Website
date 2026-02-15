@@ -150,19 +150,19 @@ export default function PageTransition({ children }: { children: React.ReactNode
       <div ref={overlayRef} className="transition-overlay" />
       <div ref={logoOverlayRef} className="logo-overlay">
         <div className="logo-overlay-container">
-          <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden mb-6">
+          <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden mb-8">
             <Image
               src={assetPath("/satyarup-logo.jpeg")}
               alt="Satyarup Law Firm"
               fill
               className="object-cover"
-              sizes="200px"
+              sizes="300px"
             />
           </div>
-          <span className="text-2xl font-bold text-white tracking-wider font-display">
+          <span className="text-4xl font-bold text-white tracking-wider font-display">
             SATYARUP
           </span>
-          <span className="text-xs text-warm-gold uppercase tracking-[0.3em] mt-1">
+          <span className="text-base text-warm-gold uppercase tracking-[0.3em] mt-2">
             Law Firm
           </span>
         </div>
