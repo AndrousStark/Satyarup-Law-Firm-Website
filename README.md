@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## 👨‍💻 Built By
+
+<div align="center">
+
+### **[Aniruddh Atrey](https://www.aniruddhatrey.com)**
+
+**AI Engineer | Cybersecurity Expert | Full-Stack Developer | SaaS Entrepreneur**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-aniruddhatrey.com-00d4ff?style=for-the-badge&logo=vercel&logoColor=white)](https://www.aniruddhatrey.com)
+[![Hire Me](https://img.shields.io/badge/Hire_Me-Services-9933ff?style=for-the-badge&logo=rocket&logoColor=white)](https://www.aniruddhatrey.com/services)
+[![MetaMinds](https://img.shields.io/badge/MetaMinds-AI_Agency-00ff88?style=for-the-badge&logo=brain&logoColor=white)](https://metaminds.firm.in)
+
+**Want a professional website built for your business?**
+[**aniruddhatrey.com/services**](https://www.aniruddhatrey.com/services) | [**metaminds.firm.in**](https://metaminds.firm.in)
+
+*Co-Founder & COO @ [F1Jobs.io](https://f1jobs.io) | Founder & CTO @ [MetaMinds](https://metaminds.firm.in)*
+
+</div>
