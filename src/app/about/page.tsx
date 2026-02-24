@@ -20,6 +20,11 @@ const services = [
   "Filing and procedural compliance",
   "Representation before courts and tribunals",
   "Post-judgment advisory and compliance",
+  "Corporate & commercial advisory",
+  "Arbitration and alternative dispute resolution",
+  "Maritime, shipping & admiralty practice",
+  "Mergers, acquisitions & due diligence",
+  "Regulatory compliance and government representation",
 ];
 
 export default function AboutPage() {

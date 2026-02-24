@@ -12,7 +12,7 @@ const practiceLinks = [
   { href: "/practice-areas/arbitration-dispute-resolution", label: "Arbitration & Disputes" },
   { href: "/practice-areas/banking-financial-litigation", label: "Banking & Financial" },
   { href: "/practice-areas/government-regulatory-matters", label: "Government & Regulatory" },
-  { href: "/practice-areas/environmental-tribunal-litigation", label: "Environmental & Tribunal" },
+  { href: "/practice-areas/environmental-energy-law", label: "Environmental & Energy" },
 ];
 
 const quickLinks = [
@@ -134,18 +134,12 @@ export default function Footer() {
           className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Satyarup Law Firm. All rights reserved. | Tech Advisor: Aniruddh Atrey
+            &copy; {new Date().getFullYear()} Satyarup Law Firm. All rights reserved. | Technology & Innovation: Aniruddh Atrey
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-xs text-white/40 hover:text-warm-gold transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs text-white/40 hover:text-warm-gold transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs text-white/40 hover:text-warm-gold transition-colors">
-              Disclaimer
-            </Link>
+            <span className="text-xs text-white/30">Privacy Policy</span>
+            <span className="text-xs text-white/30">Terms of Service</span>
+            <span className="text-xs text-white/30">Disclaimer</span>
           </div>
         </motion.div>
       </div>

@@ -16,32 +16,44 @@ const practices = [
   {
     title: "High Court Litigation",
     icon: "&#9879;",
-    description: "Appearances before Delhi, Bombay, Punjab & Haryana, Madhya Pradesh, Patna, and Tripura High Courts in original and appellate matters.",
+    description: "Appearances before Delhi, Bombay, Punjab & Haryana, Madhya Pradesh, Patna, and Tripura High Courts.",
     slug: "high-court-litigation",
   },
   {
-    title: "Arbitration & Dispute Resolution",
+    title: "Arbitration & ADR",
     icon: "&#9877;",
-    description: "Arbitration proceedings, enforcement of awards, contractual dispute resolution, and court proceedings related to arbitration.",
+    description: "Domestic & international arbitration, enforcement of awards, mediation, negotiation, and contractual dispute resolution.",
     slug: "arbitration-dispute-resolution",
   },
   {
-    title: "Banking & Financial Litigation",
+    title: "Corporate & Commercial",
     icon: "&#9830;",
-    description: "Representing major financial institutions including Bank of Baroda, PNB, Central Bank of India, and Indian Overseas Bank.",
+    description: "Incorporation, governance, M&A, private equity, joint ventures, NCLT representation, and cross-border transactions.",
+    slug: "corporate-commercial-law",
+  },
+  {
+    title: "Banking & Finance",
+    icon: "&#9830;",
+    description: "Lending, project finance, recovery proceedings, and regulatory advice for banks, NBFCs, and fintech firms.",
     slug: "banking-financial-litigation",
   },
   {
-    title: "Government & Regulatory Matters",
+    title: "Government & Public Sector",
     icon: "&#9962;",
-    description: "Representing Union of India, Ministry of Railways, Western Coalfields, Shipping Corporation, and public sector undertakings.",
+    description: "Representing Union of India, Ministries, PSUs, and public sector entities in statutory and policy matters.",
     slug: "government-regulatory-matters",
   },
   {
-    title: "Environmental & Tribunal Litigation",
+    title: "Maritime & Shipping",
+    icon: "&#9875;",
+    description: "Charterparties, cargo claims, vessel arrest, marine insurance, admiralty jurisdiction, and ship finance.",
+    slug: "maritime-shipping-admiralty",
+  },
+  {
+    title: "Intellectual Property",
     icon: "&#9874;",
-    description: "Matters before National Green Tribunal, Consumer Dispute Redressal Commissions, and regulatory forums.",
-    slug: "environmental-tribunal-litigation",
+    description: "Patent drafting, trademark filing, copyright enforcement, IP licensing, portfolio management, and IP litigation.",
+    slug: "intellectual-property",
   },
 ];
 
@@ -57,7 +69,7 @@ export default function PracticeAreas() {
         <SectionHeading
           label="Our Expertise"
           title="Practice Areas"
-          description="Our multidisciplinary team delivers specialized legal counsel across a comprehensive range of practice areas."
+          description="Our multidisciplinary team delivers specialized legal counsel across 27+ practice areas spanning litigation, corporate advisory, dispute resolution, and sector-specific matters."
           light
         />
 
@@ -102,7 +114,7 @@ export default function PracticeAreas() {
           className="mt-12 text-center"
         >
           <Button href="/practice-areas" variant="outline" className="!border-warm-gold/40 !text-warm-gold hover:!bg-warm-gold hover:!text-white">
-            View All Practice Areas
+            View All 27+ Practice Areas
           </Button>
         </motion.div>
       </div>
