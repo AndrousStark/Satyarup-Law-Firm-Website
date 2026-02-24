@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
+import { assetPath } from "@/lib/utils";
 
 /* ═══════════════════════════════════════════════════════════
    TYPES
@@ -40,7 +41,7 @@ const team: TeamMember[] = [
     name: "Dr. Ashwani Bhardwaj",
     title: "Founder & Lead Advocate",
     subtitle: "Advocate-on-Record, Supreme Court of India",
-    image: "/images/team/ashwani.jpeg",
+    image: assetPath("/images/team/ashwani.jpeg"),
     bio: [
       "Dr. Ashwani Bhardwaj is a litigation practitioner with over three decades of experience in constitutional, civil, criminal, arbitration, and commercial matters. He leads Satyarup Law Firm with a focus on strategic litigation and dispute resolution.",
       "Enrolled as an Advocate in 1996 and practising as an Advocate-on-Record since 2003, he has represented the Union of India, public sector undertakings, financial institutions, and corporate entities in significant legal proceedings involving constitutional, statutory, commercial, and regulatory issues.",
@@ -122,7 +123,7 @@ const team: TeamMember[] = [
     name: "Mr. Aayush Bhardwaj",
     title: "Legal Associate",
     subtitle: "BBA LL.B. (Hons) — Rank 1",
-    image: "/images/team/aayush.jpg",
+    image: assetPath("/images/team/aayush.jpg"),
     bio: [
       "Aayush Bhardwaj is a Rank 1 BBA LL.B. (Hons) student with an 8.176 CGPA and 10+ internships at leading law firms, Fortune 500 in-house teams, and the offices of 2 Additional Solicitor Generals of India.",
       "His experience spans competition law, corporate advisory, M&A due diligence, Supreme Court constitutional litigation, and district court civil and criminal practice. He brings sharp analytical skills, rigorous legal drafting ability, and a strong foundation in both corporate and litigation matters.",
@@ -169,7 +170,7 @@ const team: TeamMember[] = [
     name: "Aniruddh Atrey",
     title: "Director of Technology & Innovation",
     subtitle: "AI Engineer | Cybersecurity Specialist | Entrepreneur",
-    image: "/images/team/aniruddh.png",
+    image: assetPath("/images/team/aniruddh.png"),
     bio: [
       "Aniruddh Atrey is a technology entrepreneur, AI engineer, and cybersecurity specialist with 6+ years of experience building systems that protect, automate, and scale. He holds a Master of Science in Computer Science from the University of Florida and 18+ professional certifications from Stanford, Google, Cisco, EC-Council, IBM, and ISO.",
       "As Co-Founder & COO of F1Jobs.io and Founder & CTO of MetaMinds, he has architected AI systems with 95% precision, secured 50+ government web assets for the Ministry of Defence of India at INNEFU Labs (DRDO), and shipped production platforms at Arlo Technologies with 99.9% availability. He has authored 3 IEEE/Book Chapter publications and serves as a Hackathon Judge and Guest Speaker.",
