@@ -90,7 +90,7 @@ export default function Hero() {
           transition={{ delay: 2.2, duration: 0.8 }}
           className="max-w-xl text-center text-white/50 text-sm md:text-base leading-relaxed mb-10"
         >
-          A litigation and dispute-resolution practice representing clients before the Supreme Court of India, High Courts, and specialized tribunals across the country.
+          A full service legal and consulting firm providing strategic representation before the Supreme Court of India, High Courts nationwide, and specialised tribunals, complemented by integrated advisory, transactional, regulatory, and compliance expertise, and supported by international collaborations where matters require cross border capability.
         </motion.p>
 
         <motion.div
