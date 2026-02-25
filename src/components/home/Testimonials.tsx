@@ -48,7 +48,7 @@ export default function Testimonials() {
           <SectionHeading
             label="Representative Clients"
             title="Trusted by Leading Institutions"
-            description="The firm has represented government departments, public sector undertakings, financial institutions, universities, and private clients."
+            description="The firm has represented government departments, Public sector undertakings, financial institutions, universities, and private clients."
           />
 
           <motion.div
