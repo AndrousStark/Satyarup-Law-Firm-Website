@@ -1,31 +1,20 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { staggerContainer, fadeUp, cardHover } from "@/lib/animations";
+import { staggerContainer, fadeUp, slideInLeft, slideInRight } from "@/lib/animations";
 import SectionHeading from "@/components/ui/SectionHeading";
-import Image from "next/image";
 
-const features = [
-  {
-    title: "Depth of Experience",
-    description: "Over three decades of courtroom practice across multiple courts and tribunals, including the Supreme Court of India.",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&h=300&fit=crop&auto=format",
-  },
-  {
-    title: "Institutional Representation",
-    description: "Experience representing government bodies, public sector enterprises, nationalized banks, universities, and institutions.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=300&fit=crop&auto=format",
-  },
-  {
-    title: "Nationwide Practice",
-    description: "Appearances in the Supreme Court, several High Courts, and tribunals across India ensuring comprehensive geographical reach.",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&h=300&fit=crop&auto=format",
-  },
-  {
-    title: "Professional Integrity",
-    description: "Commitment to ethical practice, responsible advocacy, and upholding the highest standards of professional conduct.",
-    image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=300&h=300&fit=crop&auto=format",
-  },
+const services = [
+  "Strategic legal advisory and case assessment",
+  "Drafting of pleadings, petitions, and legal submissions",
+  "Procedural filings and compliance management",
+  "Representation before courts, tribunals, and adjudicatory bodies",
+  "Post judgment advisory and enforcement guidance",
+  "Corporate and commercial advisory services",
+  "Arbitration and alternative dispute resolution",
+  "Maritime, shipping, and admiralty practice",
+  "Mergers, acquisitions, and due diligence",
+  "Regulatory compliance and government representation",
 ];
 
 export default function WhyChooseUs() {
@@ -35,43 +24,73 @@ export default function WhyChooseUs() {
     <section className="py-20 md:py-28 bg-cream">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
-          label="Why Choose Us"
-          title="The Satyarup Advantage"
-          description="We combine legal excellence with a commitment to understanding your unique challenges."
+          label="Professional Commitment"
+          title="Professional Commitment and Legal Approach"
         />
 
+        {/* Intro Paragraphs */}
         <motion.div
-          variants={prefersReducedMotion ? {} : staggerContainer}
+          variants={prefersReducedMotion ? {} : slideInLeft}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+          className="max-w-4xl mx-auto mb-16"
         >
-          {features.map((feature) => (
-            <motion.div
-              key={feature.title}
-              variants={prefersReducedMotion ? {} : cardHover}
-              initial="rest"
-              whileHover="hover"
-              className="group"
-            >
-              <motion.div variants={fadeUp} className="rounded-xl border border-warm-gold/10 bg-white p-6 shadow-sm transition-all hover:border-warm-gold/30 hover:shadow-lg h-full">
-                <div className="mb-4 w-12 h-12 rounded-lg overflow-hidden">
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    width={48}
-                    height={48}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <h3 className="mb-3 text-lg font-semibold text-charcoal group-hover:text-warm-gold transition-colors font-display">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-warm-gray leading-relaxed">{feature.description}</p>
+          <p className="text-warm-gray leading-relaxed mb-6 text-center">
+            Satyarup Law Firm is dedicated to delivering high quality legal services founded on
+            professionalism, diligence, and integrity. The firm provides comprehensive legal
+            representation and strategic advisory support across a broad spectrum of legal
+            disciplines, serving clients with precision and accountability.
+          </p>
+          <p className="text-warm-gray leading-relaxed text-center">
+            With a structured and methodical approach, the firm manages matters at every stage of
+            legal proceedings. Each engagement is guided by meticulous preparation, rigorous legal
+            research, and sound professional judgment, ensuring that legal strategies are both
+            technically robust and practically effective.
+          </p>
+        </motion.div>
+
+        {/* Divider */}
+        <div className="flex items-center justify-center mb-16">
+          <div className="h-px w-16 bg-warm-gold/40" />
+          <div className="mx-4 h-2 w-2 rotate-45 border border-warm-gold/40" />
+          <div className="h-px w-16 bg-warm-gold/40" />
+        </div>
+
+        {/* Scope of Services */}
+        <motion.div
+          variants={prefersReducedMotion ? {} : slideInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-semibold text-charcoal text-center mb-10">
+            Scope of Services
+          </h3>
+          <p className="text-warm-gray leading-relaxed text-center mb-10">
+            The firm offers a comprehensive range of services designed to address both contentious
+            and non contentious legal requirements, including:
+          </p>
+
+          <motion.div
+            variants={prefersReducedMotion ? {} : staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid gap-4 md:grid-cols-2"
+          >
+            {services.map((service) => (
+              <motion.div
+                key={service}
+                variants={fadeUp}
+                className="flex items-start gap-3 rounded-xl border border-warm-gold/10 bg-white p-4 shadow-sm transition-all hover:border-warm-gold/30 hover:shadow-md"
+              >
+                <span className="mt-1.5 h-2 w-2 shrink-0 rotate-45 bg-warm-gold" />
+                <p className="text-sm text-charcoal leading-relaxed">{service}</p>
               </motion.div>
-            </motion.div>
-          ))}
+            ))}
+          </motion.div>
         </motion.div>
       </div>
     </section>

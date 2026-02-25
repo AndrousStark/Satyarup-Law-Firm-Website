@@ -9,8 +9,8 @@ import Image from "next/image";
 const stats = [
   { value: "30+", label: "Years Experience" },
   { value: "AoR", label: "Supreme Court of India" },
-  { value: "6+", label: "High Courts Nationwide" },
-  { value: "Since 1996", label: "Legal Practice" },
+  { value: "Pan India", label: "Presence & Network" },
+  { value: "Full Service", label: "Legal & Consulting" },
 ];
 
 export default function AboutPreview() {
@@ -61,18 +61,28 @@ export default function AboutPreview() {
           >
             <SectionHeading
               label="About Our Firm"
-              title="Litigation-Focused Legal Practice"
+              title="Diversified Full Service Legal & Consulting Practice"
               align="left"
             />
             <p className="text-warm-gray leading-relaxed mb-6">
-              Satyarup Law Firm is a litigation-focused legal practice led by Dr. Ashwani Bhardwaj,
-              Advocate-on-Record, Supreme Court of India, bringing over three decades of legal
-              experience in complex litigation, arbitration, and government representation.
+              Satyarup Law Firm is a diversified full service legal and consulting practice
+              delivering integrated litigation, advisory, transactional, regulatory, research,
+              and paralegal solutions across India. Established on principles of excellence,
+              integrity, and strategic precision, the firm combines deep legal acumen with
+              commercially informed insight to serve clients in an increasingly complex
+              regulatory and business environment.
+            </p>
+            <p className="text-warm-gray leading-relaxed mb-4">
+              Led by Dr. Ashwani Bhardwaj, Advocate on Record, Supreme Court of India, the firm
+              draws upon over three decades of experience in handling high value and multifaceted
+              legal mandates across sectors and jurisdictions. The firm maintains a strong presence
+              before the Supreme Court of India and regularly appears before High Courts across
+              India, national tribunals, appellate authorities, and specialised adjudicatory forums.
             </p>
             <p className="text-warm-gray leading-relaxed mb-8">
-              The firm regularly appears before the Supreme Court of India, various High Courts,
-              and tribunals in matters involving civil, criminal, constitutional, arbitration,
-              banking, commercial, and environmental law.
+              Committed to professional excellence, discretion, and strategic clarity, the firm
+              positions itself not merely as legal counsel, but as a long term partner in
+              governance, growth, and risk management.
             </p>
 
             {/* Stats Grid */}
