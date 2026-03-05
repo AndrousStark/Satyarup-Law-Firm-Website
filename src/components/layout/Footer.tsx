@@ -134,7 +134,7 @@ export default function Footer() {
           className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Satyarup Law Firm. All rights reserved. | Technology & Innovation: Aniruddh Atrey
+            &copy; {new Date().getFullYear()} Satyarup Law Firm. All rights reserved. | <a href="/people/#aniruddh" className="hover:text-warm-gold transition-colors">Technology &amp; Innovation</a>: <a href="https://aniruddhatrey.com" target="_blank" rel="noopener noreferrer" className="hover:text-warm-gold transition-colors">Aniruddh Atrey</a>
           </p>
           <div className="flex gap-6">
             <span className="text-xs text-white/30">Privacy Policy</span>
