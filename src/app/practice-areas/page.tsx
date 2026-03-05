@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { fadeUp, staggerContainer } from "@/lib/animations";
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -204,6 +203,12 @@ const categories = ["All", "Litigation", "Corporate", "Financial", "Regulatory",
 
 export default function PracticeAreasPage() {
   const prefersReducedMotion = useReducedMotion();
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filtered = useMemo(
+    () => activeCategory === "All" ? practices : practices.filter((p) => p.category === activeCategory),
+    [activeCategory]
+  );
 
   return (
     <>
@@ -237,44 +242,74 @@ export default function PracticeAreasPage() {
         {/* Practice Areas Grid */}
         <section className="py-20 md:py-28 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <motion.div
-              variants={prefersReducedMotion ? {} : staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-            >
-              {practices.map((practice, i) => (
-                <motion.div key={practice.slug} variants={fadeUp}>
-                  <Link
-                    href={`/practice-areas/${practice.slug}`}
-                    className="group block rounded-2xl border border-warm-gold/10 overflow-hidden hover:border-warm-gold/30 hover:shadow-xl transition-all duration-500 h-full"
-                  >
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image
-                        src={practice.image}
-                        alt={practice.title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
-                      <span className="absolute top-3 right-3 text-[10px] font-semibold text-white/80 bg-warm-gold/80 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        {practice.category}
-                      </span>
-                    </div>
-                    <div className="p-6">
-                      <h2 className="text-lg font-bold text-charcoal font-display mb-2 group-hover:text-warm-gold transition-colors">
-                        {practice.title}
-                      </h2>
-                      <p className="text-sm text-warm-gray leading-relaxed line-clamp-3">{practice.description}</p>
-                      <span className="inline-block mt-4 text-xs font-semibold text-warm-gold group-hover:underline">
-                        Learn More &rarr;
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2 mb-12">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all duration-300 border ${
+                    activeCategory === cat
+                      ? "bg-warm-gold text-white border-warm-gold shadow-lg shadow-warm-gold/20"
+                      : "bg-white text-warm-gray border-warm-gold/20 hover:border-warm-gold/50 hover:text-charcoal"
+                  }`}
+                >
+                  {cat}
+                  {cat !== "All" && (
+                    <span className={`ml-1.5 text-[10px] ${activeCategory === cat ? "text-white/70" : "text-warm-gray/50"}`}>
+                      {practices.filter((p) => p.category === cat).length}
+                    </span>
+                  )}
+                </button>
               ))}
-            </motion.div>
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCategory}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={prefersReducedMotion ? {} : { opacity: 0, y: -12 }}
+                transition={{ duration: 0.3 }}
+                className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {filtered.map((practice) => (
+                  <motion.div
+                    key={practice.slug}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <Link
+                      href={`/practice-areas/${practice.slug}`}
+                      className="group block rounded-2xl border border-warm-gold/10 overflow-hidden hover:border-warm-gold/30 hover:shadow-xl transition-all duration-500 h-full"
+                    >
+                      <div className="relative aspect-[16/9] overflow-hidden">
+                        <Image
+                          src={practice.image}
+                          alt={practice.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent" />
+                        <span className="absolute top-3 right-3 text-[10px] font-semibold text-white/80 bg-warm-gold/80 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                          {practice.category}
+                        </span>
+                      </div>
+                      <div className="p-6">
+                        <h2 className="text-lg font-bold text-charcoal font-display mb-2 group-hover:text-warm-gold transition-colors">
+                          {practice.title}
+                        </h2>
+                        <p className="text-sm text-warm-gray leading-relaxed line-clamp-3">{practice.description}</p>
+                        <span className="inline-block mt-4 text-xs font-semibold text-warm-gold group-hover:underline">
+                          Learn More &rarr;
+                        </span>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </section>
       </main>

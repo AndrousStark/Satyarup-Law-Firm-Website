@@ -82,7 +82,7 @@ export default function Header() {
             href="/contact"
             className="ml-4 rounded-full border border-warm-gold px-6 py-2 text-sm font-medium uppercase tracking-wider text-warm-gold transition-all duration-300 hover:bg-warm-gold hover:text-white"
           >
-            Free Consultation
+            Schedule Consultation
           </Link>
         </div>
 
@@ -154,7 +154,7 @@ export default function Header() {
                   onClick={() => setMobileOpen(false)}
                   className="block w-full text-center rounded-full border-2 border-warm-gold px-6 py-3 text-sm font-semibold uppercase tracking-wider text-warm-gold hover:bg-warm-gold hover:text-white transition-all"
                 >
-                  Free Consultation
+                  Schedule Consultation
                 </Link>
               </motion.div>
             </div>

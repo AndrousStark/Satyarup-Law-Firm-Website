@@ -173,7 +173,7 @@ export default function AboutPage() {
                 { step: "03", title: "Drafting", desc: "Meticulous drafting and documentation" },
                 { step: "04", title: "Advocacy", desc: "Effective oral advocacy in courts" },
                 { step: "05", title: "Communication", desc: "Continuous client communication" },
-              ].map((item, i) => (
+              ].map((item) => (
                 <motion.div key={item.step} variants={fadeUp} className="relative text-center p-6 rounded-xl bg-cream/50 border border-warm-gold/10">
                   <span className="text-3xl font-bold text-warm-gold/30 font-display">{item.step}</span>
                   <h3 className="text-sm font-semibold text-charcoal font-display mt-2 mb-2">{item.title}</h3>
