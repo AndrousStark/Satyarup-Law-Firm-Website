@@ -4,7 +4,7 @@ import { useEffect, useRef, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Image from "next/image";
-import { assetPath, BASE_PATH } from "@/lib/utils";
+import { assetPath } from "@/lib/utils";
 
 const NUM_BLOCKS = 20;
 
@@ -104,12 +104,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       if (href.startsWith("http") || href.startsWith("mailto") || href.startsWith("tel") || href === "#") return;
 
       e.preventDefault();
-      // target.href is the fully resolved URL which includes basePath on GitHub Pages.
-      // router.push() auto-adds basePath, so we must strip it to avoid double-prefixing.
-      let url = new URL(target.href).pathname;
-      if (BASE_PATH && url.startsWith(BASE_PATH)) {
-        url = url.slice(BASE_PATH.length) || "/";
-      }
+      const url = new URL(target.href).pathname;
       if (url !== pathname) handleRouteChange(url);
     },
     [pathname, handleRouteChange]

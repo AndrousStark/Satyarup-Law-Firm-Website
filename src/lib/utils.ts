@@ -5,10 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-/** Base path for GitHub Pages deployment. Must match next.config.ts basePath. */
-export const BASE_PATH = process.env.NODE_ENV === "production" ? "/Satyarup-Law-Firm-Website" : "";
-
-/** Prefix a local asset path with the basePath for static export. */
+/** Prefix a local asset path (no-op now that custom domain is used). */
 export function assetPath(path: string): string {
-  return `${BASE_PATH}${path}`;
+  return path;
 }
